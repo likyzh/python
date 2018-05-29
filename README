@@ -1,0 +1,31 @@
+python安装
+
+编译安装
+
+
+./configure --enable-unicode=ucs4
+
+主要要把ssl编译进去
+
+vi .Modules/Setup.dist
+
+SSL=/usr/local/ssl
+_ssl _ssl.c \
+        -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
+        -L$(SSL)/lib -lssl -lcrypto
+        
+
+agent 需要的包：
+
+
+pip install grpcio-tools
+pip install grpcio
+pip install subprocess32
+pip install pika
+pip install psutil
+pip install elasticsearch 
+pip install MySQL-python 
+pip install pymongo 
+pip install futures 
+pip install memory_profiler 
+pip install bson 
